@@ -1,0 +1,89 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Design system colors */
+  --color-pri-lighter: 319deg 100% 87%;
+  --color-pri-light: 319deg 100% 77%;
+  --color-pri-base: 321deg 94% 44%;
+  --color-pri-dark: 321deg 94% 34%;
+  --color-pri-darker: 321deg 94% 24%;
+
+  --color-sec-lighter: 181deg 74% 80%;
+  --color-sec-light: 181deg 98% 67%;
+  --color-sec-base: 181deg 98% 37%;
+  --color-sec-dark: 181deg 98% 27%;
+  --color-sec-darker: 181deg 98% 17%;
+
+  --color-neu-0: 0deg 0% 100%;
+  --color-neu-50: 0deg 0% 98%;
+  --color-neu-100: 0deg 0% 96%;
+  --color-neu-200: 0deg 0% 93%;
+  --color-neu-300: 0deg 0% 87%;
+  --color-neu-400: 0deg 0% 74%;
+  --color-neu-500: 0deg 0% 60%;
+  --color-neu-600: 0deg 0% 45%;
+  --color-neu-700: 0deg 0% 35%;
+  --color-neu-800: 0deg 0% 20%;
+  --color-neu-900: 0deg 0% 9%;
+
+  /* CSS Variables for layout */
+  --navbar-h: 72px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  html.dark {
+    --color-neu-0: 0deg 0% 0%;
+    --color-neu-50: 0deg 0% 2%;
+    --color-neu-100: 0deg 0% 4%;
+    --color-neu-200: 0deg 0% 7%;
+    --color-neu-300: 0deg 0% 13%;
+    --color-neu-400: 0deg 0% 26%;
+    --color-neu-500: 0deg 0% 40%;
+    --color-neu-600: 0deg 0% 55%;
+    --color-neu-700: 0deg 0% 65%;
+    --color-neu-800: 0deg 0% 80%;
+    --color-neu-900: 0deg 0% 91%;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Utility classes for the design system */
+.gql-container {
+  @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
+}
+
+.gql-section {
+  @apply py-16 lg:py-24;
+}
+
+.gql-focus-visible {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pri-base;
+}
+
+.gql-all-anchors-focusable a {
+  @apply gql-focus-visible;
+}
+
+.gql-conf-navbar-strip {
+  @apply relative;
+}
+
+.gql-conf-navbar-strip::before {
+  content: "";
+  @apply absolute top-0 h-[calc(var(--navbar-h)+1px)] w-full;
+}
