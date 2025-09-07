@@ -39,9 +39,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
 
-  html.dark {
     --color-neu-0: 0deg 0% 0%;
     --color-neu-50: 0deg 0% 2%;
     --color-neu-100: 0deg 0% 4%;
