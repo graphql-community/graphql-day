@@ -19,7 +19,7 @@ export function CtaCardSection({
   return (
     <div className="gql-section">
       <section
-        className="relative overflow-hidden bg-gradient-to-r from-pri-dark to-pri-base p-6 dark:from-pri-darker dark:to-pri-dark sm:p-16"
+        className="relative overflow-hidden bg-gradient-to-tr from-pri-base to-sec-base p-6 dark:from-pri-darker dark:to-pri-dark sm:p-16"
         {...rest}
       >
         <div className="relative z-10 flex flex-col gap-10 sm:items-start [@media(max-width:420px)]:text-center">
@@ -41,8 +41,8 @@ export function CtaCardSection({
           className="
               pointer-events-none absolute
               sm:bottom-[-277px] inset-0 sm:left-1/3 xl:left-1/2 sm:top-[-107px] xl:right-[-391px]
-              [--start:hsl(var(--color-sec-base))]
-              [--end:hsl(var(--color-sec-lighter))]
+              [--start:hsl(var(--color-neu-0))]
+              [--end:hsl(var(--color-neu-50))]
               dark:[--start:hsl(var(--color-sec-dark))]
               dark:[--end:hsl(var(--color-sec-base))]
 

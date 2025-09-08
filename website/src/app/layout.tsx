@@ -31,7 +31,7 @@ export default function RootLayout({
   children: ReactNode;
 }): ReactElement {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth antialiased">
       <head>
         <style>{`html { scroll-padding-top: 5rem }`}</style>
         <NewFontsStyleTag />

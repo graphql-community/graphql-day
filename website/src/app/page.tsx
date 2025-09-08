@@ -26,7 +26,7 @@ export default function GraphQLDayAtFostPage() {
         colorScheme="neutral"
         stripes={
           <HeroStripes
-            className="-scale-x-100 [--color-sec-base:181deg_97.8%_36.1%] [--color-sec-dark:181deg_98.3%_23.1%] [--color-sec-light:181deg_74.3%_80.2%] dark:data-[loaded=true]:opacity-80"
+            className="-scale-x-100 dark:data-[loaded=true]:opacity-80"
             evenClassName="bg-[linear-gradient(180deg,hsl(var(--color-sec-light))_0%,hsl(319deg_100%_90%_/_0.2)_100%)] dark:bg-[linear-gradient(180deg,hsl(var(--color-sec-dark))_0%,hsl(var(--color-neu-100))_100%)]"
             oddClassName="bg-[linear-gradient(180deg,hsl(319deg_100%_90%_/_0.2)_0%,hsl(var(--color-sec-base))_100%)] dark:bg-[linear-gradient(180deg,hsl(var(--color-sec-dark))_0%,hsl(var(--color-neu-0))_100%)]"
           />
