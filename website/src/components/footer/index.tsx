@@ -2,8 +2,9 @@ import NextLink from "next/link";
 import { ReactNode } from "react";
 import { clsx } from "clsx";
 
-import { SocialIcons } from "../../../_components/social-icons";
-import { StripesDecoration } from "../../../_design-system/stripes-decoration";
+// TODO
+// import { SocialIcons } from "../../../_components/social-icons";
+import { StripesDecoration } from "../design-system/stripes-decoration";
 
 import blurBean from "./blur-bean.webp";
 import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
@@ -58,7 +59,7 @@ export function Footer({
             .
           </p>
         </div>
-        <SocialIcons className="[&>a:focus]:text-current [&>a:focus]:ring-transparent [&>a:hover]:bg-neu-900/10 [&>a:hover]:text-current" />
+        {/* TODO: <SocialIcons className="[&>a:focus]:text-current [&>a:focus]:ring-transparent [&>a:hover]:bg-neu-900/10 [&>a:hover]:text-current" /> */}
       </div>
     </footer>
   );
