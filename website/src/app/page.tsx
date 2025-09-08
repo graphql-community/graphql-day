@@ -159,9 +159,7 @@ function Card({ title, description }: { title: string; description: string }) {
   return (
     <article className="flex flex-col gap-4 border border-neu-200 p-6">
       <h4 className="typography-h3">{title}</h4>
-      <p className="typography-body-md text-neu-700 dark:text-neu-300">
-        {description}
-      </p>
+      <p className="typography-body-md text-neu-700">{description}</p>
     </article>
   );
 }
