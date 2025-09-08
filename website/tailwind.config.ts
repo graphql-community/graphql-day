@@ -199,7 +199,6 @@ const config: Config = {
     }),
     tailwindMediaHover(),
   ],
-  darkMode: ["class", 'html[class~="dark"]'],
 };
 
 export default config;

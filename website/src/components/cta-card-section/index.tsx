@@ -18,7 +18,7 @@ export function CtaCardSection({
   return (
     <div className="gql-section">
       <section
-        className="relative overflow-hidden bg-gradient-to-tr from-pri-base to-sec-base p-6 dark:from-pri-darker dark:to-pri-dark sm:p-16"
+        className="relative overflow-hidden bg-gradient-to-tr from-pri-base to-sec-base p-6 dark:from-pri-dark dark:to-sec-base sm:p-16"
         {...rest}
       >
         <div className="relative z-10 flex flex-col gap-10 sm:items-start [@media(max-width:420px)]:text-center">

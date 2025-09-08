@@ -16,7 +16,7 @@
   --color-sec-darker: 181deg 98% 17%;
 
   --color-neu-0: 0 0% 100%;
-  --color-neu-50: 75 37% 97%;
+  --color-neu-50: 75 7% 97%;
   --color-neu-100: 75 2% 95%;
   --color-neu-200: 75 2% 90%;
   --color-neu-300: 75 2% 85%;
@@ -37,13 +37,13 @@
     --color-neu-800: 75 37% 97%;
     --color-neu-700: 75 2% 95%;
     --color-neu-600: 75 2% 90%;
-    --color-neu-500: 75 2% 85%;
-    --color-neu-400: 75 2% 80%;
-    --color-neu-300: 75 2% 70%;
-    --color-neu-200: 75 2% 60%;
-    --color-neu-100: 75 2% 40%;
-    --color-neu-50: 75 2% 20%;
-    --color-neu-0: 75 2% 5%;
+    --color-neu-500: 75 2% 55%;
+    --color-neu-400: 75 2% 40%;
+    --color-neu-300: 75 2% 27%;
+    --color-neu-200: 75 2% 15%;
+    --color-neu-100: 75 2% 9%;
+    --color-neu-50: 75 2% 7%;
+    --color-neu-0: 75 2% 2%;
   }
 }
 

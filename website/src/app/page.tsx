@@ -78,7 +78,11 @@ export default function GraphQLDayAtFostPage() {
             description="Meet the experts, share best practices, and discover the latest innovations shaping the future of APIs."
           >
             <div className="flex gap-4 flex-wrap sm:items-center *:flex-1">
-              <Button href={CFP_LINK} variant="primary">
+              <Button
+                href={CFP_LINK}
+                variant="primary"
+                className="whitespace-nowrap"
+              >
                 Submit a proposal
               </Button>
               <Button href={TICKETS_LINK} variant="secondary">
