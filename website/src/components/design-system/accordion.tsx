@@ -2,10 +2,9 @@
 
 import clsx from "clsx";
 
+import { Anchor } from "./anchor";
 import { ArrowDownIcon } from "./pixelarticons/arrow-down-icon";
 import { ExternalLinkIcon } from "./pixelarticons/external-link-icon";
-
-import { Anchor } from "./anchor";
 
 export interface AccordionItem {
   title: string;

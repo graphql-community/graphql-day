@@ -2,8 +2,8 @@ import { ImageResponse } from "next/og";
 
 import { loadFontsForOG } from "@/fonts/og/load-fonts-for-og";
 
-import { GenericOpengraphImage } from "./generic-opengraph-image";
 import { PLACE } from "../constants";
+import { GenericOpengraphImage } from "./generic-opengraph-image";
 
 export const contentType = "image/png";
 export const size = {

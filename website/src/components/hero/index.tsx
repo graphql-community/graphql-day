@@ -1,18 +1,15 @@
+import clsx from "clsx";
 import { ReactNode } from "react";
 
+import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
 import { CalendarIcon } from "../design-system/pixelarticons/calendar-icon";
 import { PinIcon } from "../design-system/pixelarticons/pin-icon";
-
-import GraphQLFoundationWordmark from "../../graphql-foundation-wordmark.svg";
-
-import { ImageLoaded } from "../image-loaded";
-import blurBean from "./blur-bean-cropped.webp";
-import clsx from "clsx";
 import {
   StripesDecoration,
   StripesDecorationProps,
 } from "../design-system/stripes-decoration";
-import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
+import { ImageLoaded } from "../image-loaded";
+import blurBean from "./blur-bean-cropped.webp";
 
 export type HeroProps = {
   pageName?: string;

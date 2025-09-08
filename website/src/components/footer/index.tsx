@@ -1,13 +1,12 @@
+import { clsx } from "clsx";
 import NextLink from "next/link";
 import { ReactNode } from "react";
-import { clsx } from "clsx";
 
+import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
 // TODO
 // import { SocialIcons } from "../../../_components/social-icons";
 import { StripesDecoration } from "../design-system/stripes-decoration";
-
 import blurBean from "./blur-bean.webp";
-import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
 
 interface FooterLink {
   href: string;

@@ -1,7 +1,7 @@
 import { SimpleOpengraphImage } from "../components/simple-opengraph-image";
 export {
-  generateStaticParams,
   contentType,
+  generateStaticParams,
   size,
 } from "../components/simple-opengraph-image";
 

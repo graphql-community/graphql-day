@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import type { StaticImageData } from "next/image"
-import { useEffect, useState } from "react"
+import type { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
 
-const _cache = new Map<string, HTMLImageElement>()
+const _cache = new Map<string, HTMLImageElement>();
 
 export interface ImageLoadedProps extends React.HTMLAttributes<HTMLDivElement> {
-  image: string | StaticImageData
-  fetchPriority?: "high" | "low" | "auto"
+  image: string | StaticImageData;
+  fetchPriority?: "high" | "low" | "auto";
 }
 
 export function ImageLoaded({
@@ -15,28 +15,27 @@ export function ImageLoaded({
   fetchPriority = "auto",
   ...rest
 }: ImageLoadedProps) {
-  const [loaded, setLoaded] = useState(false)
-  const src = typeof image === "string" ? image : image.src
+  const [loaded, setLoaded] = useState(false);
+  const src = typeof image === "string" ? image : image.src;
 
-  const alreadyLoaded = _cache.get(src)?.complete
+  const alreadyLoaded = _cache.get(src)?.complete;
 
   useEffect(() => {
-    let img: HTMLImageElement
-    if (_cache.has(src)) {
-      img = _cache.get(src)!
+    let img: HTMLImageElement | undefined = _cache.get(src);
+    if (img) {
       if (img.complete) {
-        setLoaded(true)
+        setLoaded(true);
       } else {
-        img.addEventListener("load", () => setLoaded(true))
+        img.addEventListener("load", () => setLoaded(true));
       }
     } else {
-      img = new Image()
-      img.src = src
-      img.fetchPriority = fetchPriority
-      img.addEventListener("load", () => setLoaded(true))
-      _cache.set(src, img)
+      img = new Image();
+      img.src = src;
+      img.fetchPriority = fetchPriority;
+      img.addEventListener("load", () => setLoaded(true));
+      _cache.set(src, img);
     }
-  }, [src, fetchPriority])
+  }, [src, fetchPriority]);
 
-  return <div data-loaded={alreadyLoaded || loaded} {...rest} />
+  return <div data-loaded={alreadyLoaded || loaded} {...rest} />;
 }

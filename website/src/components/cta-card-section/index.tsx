@@ -1,5 +1,4 @@
 import { StripesDecoration } from "../design-system/stripes-decoration";
-
 import logoMask from "./logo-mask.webp";
 
 export interface CtaCardSectionProps

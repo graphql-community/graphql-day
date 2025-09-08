@@ -1,24 +1,22 @@
 "use client";
 
-import { ReactElement, useCallback, useEffect, useState } from "react";
 import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 
+import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../constants";
 import { Badge } from "./badge";
-
 import { Anchor } from "./design-system/anchor";
-import { MenuIcon } from "./design-system/pixelarticons/menu-icon";
 import { CloseIcon } from "./design-system/pixelarticons/close-icon";
-import { TIME_ELEMENT, ADDRESS_ELEMENT } from "../constants";
+import { MenuIcon } from "./design-system/pixelarticons/menu-icon";
 import { GraphQLDayLogoLink } from "./logo-link";
 
 export interface NavbarProps {
   links: { href: string; children: React.ReactNode; "aria-disabled"?: true }[];
   year: number;
-  date: string;
 }
 
-export function Navbar({ links, year, date }: NavbarProps): ReactElement {
+export function Navbar({ links, year }: NavbarProps): ReactElement {
   const pathname = usePathname();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 

@@ -1,7 +1,7 @@
-import type { ImageResponse } from "next/og";
-
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+
+import type { ImageResponse } from "next/og";
 
 type FontOptions = NonNullable<
   NonNullable<ConstructorParameters<typeof ImageResponse>[1]>["fonts"]

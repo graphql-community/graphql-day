@@ -1,6 +1,6 @@
-import { ForwardedRef, forwardRef, ReactElement } from "react";
-import NextLink from "next/link";
 import type { LinkProps as NextLinkProps } from "next/link";
+import NextLink from "next/link";
+import { ForwardedRef, forwardRef, ReactElement } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
 export declare namespace AnchorProps {

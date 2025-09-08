@@ -1,8 +1,8 @@
-import { fontFamily } from "tailwindcss/defaultTheme";
-import type { Config } from "tailwindcss";
-import typography from "@tailwindcss/typography";
-import plugin from "tailwindcss/plugin";
 import containerQueries from "@tailwindcss/container-queries";
+import typography from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],

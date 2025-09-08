@@ -1,5 +1,6 @@
-import NextLink from "next/link";
 import { clsx } from "clsx";
+import NextLink from "next/link";
+
 import { GraphQLDayLogo } from "./graphql-day-logo";
 
 export interface GraphQLDayLogoLinkProps

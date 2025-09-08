@@ -2,7 +2,6 @@ import {
   ConferenceOpengraphImageHeader,
   OG_IMAGE_HEADER_HEIGHT,
 } from "./conference-opengraph-image-header";
-
 import graphqlLogoStripes from "./graphql-logo-stripes.png";
 
 /**

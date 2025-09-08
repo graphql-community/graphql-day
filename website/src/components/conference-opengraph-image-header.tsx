@@ -1,12 +1,11 @@
 import { CalendarIcon } from "./design-system/pixelarticons/calendar-icon";
 import { PinIcon } from "./design-system/pixelarticons/pin-icon";
-
-import { GraphQLDayLogo } from "./graphql-day-logo";
 import {
   colors,
   fonts,
   RIGHT_COLUMN_WIDTH_PX,
 } from "./generic-opengraph-image";
+import { GraphQLDayLogo } from "./graphql-day-logo";
 
 export const OG_IMAGE_HEADER_HEIGHT = 154;
 

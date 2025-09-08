@@ -1,16 +1,14 @@
 import { Metadata } from "next";
 
-import { Button } from "../components/design-system/button";
+import { CtaCardSection } from "../components/cta-card-section";
 import { Accordion } from "../components/design-system/accordion";
+import { Anchor } from "../components/design-system/anchor";
+import { Button } from "../components/design-system/button";
 import { Hero, HeroDateAndLocation, HeroStripes } from "../components/hero";
 import { NavbarPlaceholder } from "../components/navbar";
-import { CtaCardSection } from "../components/cta-card-section";
-
-import heroPhoto from "./hero-photo.webp";
-import { Anchor } from "../components/design-system/anchor";
-import { HeroImageProper } from "./hero-image-proper";
-
 import { CFP_LINK, TICKETS_LINK } from "../constants";
+import { HeroImageProper } from "./hero-image-proper";
+import heroPhoto from "./hero-photo.webp";
 
 export const metadata: Metadata = {
   title: "GraphQL Day at FOST",

@@ -1,14 +1,13 @@
-import { ReactElement, ReactNode } from "react";
-import { Metadata } from "next";
+import "../globals.css";
 
-import { Navbar } from "../components/navbar";
+import { Metadata } from "next";
+import { ReactElement, ReactNode } from "react";
+
 import { Footer } from "../components/footer";
 import { GraphQLDayLogoLink } from "../components/logo-link";
-
-import { NewFontsStyleTag } from "../fonts";
+import { Navbar } from "../components/navbar";
 import { CFP_LINK, TICKETS_LINK } from "../constants";
-
-import "../globals.css";
+import { NewFontsStyleTag } from "../fonts";
 
 export const metadata: Metadata = {
   twitter: {
