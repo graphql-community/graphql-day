@@ -100,9 +100,10 @@ function AboutEventSection() {
         <div className="flex flex-col gap-6 md:flex-1">
           <p className="typography-body-lg">
             Join us for a special GraphQL Day as part of the Future of Software
-            Week, co‑located with API Days Paris. This focused event brings
-            together GraphQL practitioners, innovators, and thought leaders for
-            a day of deep technical discussions and hands-on learning.
+            Technology, co‑located with API Days Paris. This focused event
+            brings together GraphQL practitioners, innovators, and thought
+            leaders for a day of deep technical discussions and hands-on
+            learning.
           </p>
           <p className="typography-body-lg text-pretty">
             Whether you're already using GraphQL in production or just getting
@@ -118,7 +119,7 @@ function AboutEventSection() {
 
 function ExpertMeetupSection() {
   return (
-    <section className="gql-section xl:py-12">
+    <section className="gql-section xl:py-12 ">
       <h3 className="typography-h2 mb-12">Why attend GraphQL Day?</h3>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <Card

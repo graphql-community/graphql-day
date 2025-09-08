@@ -48,8 +48,8 @@
 }
 
 body {
-  background: var(--color-neu-0);
-  color: var(--color-neu-900);
+  background: hsl(var(--color-neu-0));
+  color: hsl(var(--color-neu-900));
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
