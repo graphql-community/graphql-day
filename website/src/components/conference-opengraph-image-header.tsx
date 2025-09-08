@@ -73,7 +73,9 @@ export function ConferenceOpengraphImageHeader({
                   marginTop: "-6px",
                 }}
               />
-              <div>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+              >
                 GraphQL Day{" "}
                 <span style={{ color: colors.priBase }}>{year}</span>
               </div>
