@@ -3,15 +3,11 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  /* Design system colors */
-  --color-pri-lighter: 319deg 100% 87%;
-  --color-pri-light: 319deg 100% 77%;
-  --color-pri-base: 321deg 94% 44%;
-  --color-pri-dark: 321deg 94% 34%;
-  --color-pri-darker: 321deg 94% 24%;
+  --color-pri-lighter: 319 100% 90%;
+  --color-pri-light: 318 100% 80%;
+  --color-pri-base: 319 100% 44.1%;
+  --color-pri-dark: 319 100% 30%;
+  --color-pri-darker: 319 100% 20%;
 
   --color-sec-lighter: 181deg 74% 80%;
   --color-sec-light: 181deg 98% 67%;
@@ -19,17 +15,17 @@
   --color-sec-dark: 181deg 98% 27%;
   --color-sec-darker: 181deg 98% 17%;
 
-  --color-neu-0: 0deg 0% 100%;
-  --color-neu-50: 0deg 0% 98%;
-  --color-neu-100: 0deg 0% 96%;
-  --color-neu-200: 0deg 0% 93%;
-  --color-neu-300: 0deg 0% 87%;
-  --color-neu-400: 0deg 0% 74%;
-  --color-neu-500: 0deg 0% 60%;
-  --color-neu-600: 0deg 0% 45%;
-  --color-neu-700: 0deg 0% 35%;
-  --color-neu-800: 0deg 0% 20%;
-  --color-neu-900: 0deg 0% 9%;
+  --color-neu-0: 0 0% 100%;
+  --color-neu-50: 75 37% 97%;
+  --color-neu-100: 75 2% 95%;
+  --color-neu-200: 75 2% 90%;
+  --color-neu-300: 75 2% 85%;
+  --color-neu-400: 75 2% 80%;
+  --color-neu-500: 75 2% 70%;
+  --color-neu-600: 75 2% 60%;
+  --color-neu-700: 75 2% 40%;
+  --color-neu-800: 75 2% 20%;
+  --color-neu-900: 75 2% 5%;
 
   /* CSS Variables for layout */
   --navbar-h: 72px;
@@ -37,26 +33,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-
-    --color-neu-0: 0deg 0% 0%;
-    --color-neu-50: 0deg 0% 2%;
-    --color-neu-100: 0deg 0% 4%;
-    --color-neu-200: 0deg 0% 7%;
-    --color-neu-300: 0deg 0% 13%;
-    --color-neu-400: 0deg 0% 26%;
-    --color-neu-500: 0deg 0% 40%;
-    --color-neu-600: 0deg 0% 55%;
-    --color-neu-700: 0deg 0% 65%;
-    --color-neu-800: 0deg 0% 80%;
-    --color-neu-900: 0deg 0% 91%;
+    --color-neu-900: 0 0% 100%;
+    --color-neu-800: 75 37% 97%;
+    --color-neu-700: 75 2% 95%;
+    --color-neu-600: 75 2% 90%;
+    --color-neu-500: 75 2% 85%;
+    --color-neu-400: 75 2% 80%;
+    --color-neu-300: 75 2% 70%;
+    --color-neu-200: 75 2% 60%;
+    --color-neu-100: 75 2% 40%;
+    --color-neu-50: 75 2% 20%;
+    --color-neu-0: 75 2% 5%;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-neu-0);
+  color: var(--color-neu-900);
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
