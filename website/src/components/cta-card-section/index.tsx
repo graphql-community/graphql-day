@@ -42,8 +42,8 @@ export function CtaCardSection({
               sm:bottom-[-277px] inset-0 sm:left-1/3 xl:left-1/2 sm:top-[-107px] xl:right-[-391px]
               [--start:hsl(var(--color-neu-0))]
               [--end:hsl(var(--color-neu-50))]
-              dark:[--start:hsl(var(--color-sec-dark))]
-              dark:[--end:hsl(var(--color-sec-base))]
+              dark:[--start:hsl(var(--color-neu-800)/.75)]
+              dark:[--end:hsl(var(--color-neu-900))]
 
               [mask-size:cover]
               max-sm:[mask-position:center] max-sm:opacity-50

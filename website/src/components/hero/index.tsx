@@ -32,7 +32,7 @@ export function Hero(props: HeroProps) {
         "gql-conf-navbar-strip relative isolate flex flex-col justify-center selection:bg-blk/40 before:bg-white/30 before:dark:bg-blk/40",
         colorScheme === "primary"
           ? "bg-pri-base text-neu-0 dark:bg-pri-darker dark:text-neu-900 dark:selection:bg-white/40"
-          : "bg-neu-100 dark:bg-neu-50/25"
+          : "bg-neu-100 dark:bg-neu-50"
       )}
     >
       <article className="relative">
