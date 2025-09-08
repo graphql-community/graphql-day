@@ -122,7 +122,7 @@ function AboutEventSection() {
       <div className="flex flex-col gap-6 md:flex-1">
         <p className="typography-body-lg">
           Join us for a special GraphQL Day as part of the Future of Software
-          Week, co‑located with API Days Paris. This focused event brings
+          Week, co‑located with API Days Paris at CNIT La Defense, Paris. This focused event brings
           together GraphQL practitioners, innovators, and thought leaders for a
           day of deep technical discussions and hands-on learning.
         </p>
