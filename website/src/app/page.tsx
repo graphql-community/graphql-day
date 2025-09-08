@@ -2,25 +2,19 @@ import { Metadata } from "next";
 
 import { Button } from "../components/design-system/button";
 import { Accordion } from "../components/design-system/accordion";
-
-import { Hero, HeroStripes } from "../components/hero";
+import { Hero, HeroDateAndLocation, HeroStripes } from "../components/hero";
 import { NavbarPlaceholder } from "../components/navbar";
-import { CalendarIcon } from "../components/design-system/pixelarticons/calendar-icon";
-import { PinIcon } from "../components/design-system/pixelarticons/pin-icon";
 import { CtaCardSection } from "../components/cta-card-section";
 
 import heroPhoto from "./hero-photo.webp";
 import { Anchor } from "../components/design-system/anchor";
 import { HeroImageProper } from "./hero-image-proper";
 
+import { CFP_LINK, TICKETS_LINK } from "../constants";
+
 export const metadata: Metadata = {
   title: "GraphQL Day at FOST",
 };
-
-const CFP_LINK =
-  "https://apidaysglobal.typeform.com/speak?typeform-source=www.apidays.global";
-const TICKETS_LINK =
-  "https://ticket.apidays.global/event/apidays-paris-2025/3cccd07f-acb2-466e-8d91-cb1f208ecf42";
 
 export default function GraphQLDayAtFostPage() {
   return (
@@ -97,21 +91,6 @@ export default function GraphQLDayAtFostPage() {
         </CtaCardSection>
       </main>
     </>
-  );
-}
-
-function HeroDateAndLocation() {
-  return (
-    <div className="typography-body-md flex flex-col gap-4 md:flex-row md:gap-6">
-      <div className="flex items-center gap-2">
-        <CalendarIcon className="size-5 sm:size-6" />
-        <time dateTime="2025-09-08">December 11</time>
-      </div>
-      <div className="flex items-center gap-2">
-        <PinIcon className="size-5 sm:size-6" />
-        <address className="not-italic">CNIT La Defense, Paris</address>
-      </div>
-    </div>
   );
 }
 

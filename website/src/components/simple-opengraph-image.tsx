@@ -3,6 +3,7 @@ import { ImageResponse } from "next/og";
 import { loadFontsForOG } from "@/fonts/og/load-fonts-for-og";
 
 import { GenericOpengraphImage } from "./generic-opengraph-image";
+import { PLACE } from "../constants";
 
 export const contentType = "image/png";
 export const size = {
@@ -27,7 +28,7 @@ export async function SimpleOpengraphImage({
         pageTitle={pageTitle}
         date="December 11"
         year="2025"
-        location="CNIT La Defense, Paris"
+        location={PLACE}
       />
     ),
     {

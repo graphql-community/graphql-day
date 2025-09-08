@@ -12,6 +12,7 @@ import {
   StripesDecoration,
   StripesDecorationProps,
 } from "../design-system/stripes-decoration";
+import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
 
 export type HeroProps = {
   pageName?: string;
@@ -79,13 +80,11 @@ export function HeroDateAndLocation() {
     <div className="typography-body-md flex flex-col gap-4 md:flex-row md:gap-6">
       <div className="flex items-center gap-2">
         <CalendarIcon className="size-5 sm:size-6" />
-        <time dateTime="2025-09-08">September 08</time>
-        <span>-</span>
-        <time dateTime="2025-09-10">10, 2025</time>
+        {TIME_ELEMENT}
       </div>
       <div className="flex items-center gap-2">
         <PinIcon className="size-5 sm:size-6" />
-        <address className="not-italic">Amsterdam, Netherlands</address>
+        {ADDRESS_ELEMENT}
       </div>
     </div>
   );
