@@ -54,12 +54,12 @@ export default function GraphQLDayAtFostPage() {
         }
       >
         <HeroDateAndLocation />
-        <div className="flex items-center gap-4 max-md:flex-col">
-          <Button href={CFP_LINK} className="md:w-fit">
+        <div className="flex items-center gap-x-4 gap-y-2 flex-wrap max-sm:*:flex-1">
+          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
             Submit a proposal
           </Button>
           <Button
-            className="backdrop-blur-xl md:w-fit"
+            className="backdrop-blur-xl md:w-fit whitespace-nowrap"
             href={TICKETS_LINK}
             variant="secondary"
           >
@@ -77,7 +77,7 @@ export default function GraphQLDayAtFostPage() {
             title="Stay in the know"
             description="Meet the experts, share best practices, and discover the latest innovations shaping the future of APIs."
           >
-            <div className="flex gap-4 max-sm:flex-col sm:items-center">
+            <div className="flex gap-4 flex-wrap sm:items-center *:flex-1">
               <Button href={CFP_LINK} variant="primary">
                 Submit a proposal
               </Button>
