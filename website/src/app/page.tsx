@@ -33,14 +33,14 @@ export default function GraphQLDayAtFostPage() {
         }
         rightContent={null}
         bottom={
-          <>
+          <div className="relative z-[2] h-[560px] w-full bg-neu-700">
             <link
               rel="preload"
               as="image"
               href={heroPhoto.src}
               fetchPriority="high"
             />
-            <div className="relative z-[2] h-[560px] w-full max-w-screen-3xl">
+            <div className="gql-container h-[560px] relative">
               <div
                 className="absolute inset-0"
                 style={{
@@ -52,7 +52,7 @@ export default function GraphQLDayAtFostPage() {
               <div className="absolute inset-0 backdrop-blur-lg" />
               <HeroImageProper />
             </div>
-          </>
+          </div>
         }
       >
         <HeroDateAndLocation />
@@ -70,25 +70,25 @@ export default function GraphQLDayAtFostPage() {
         </div>
       </Hero>
       <main className="gql-all-anchors-focusable gql-conf-navbar-strip text-neu-900 before:bg-white/40 before:dark:bg-blk/30">
+        <AboutEventSection />
         <div className="gql-container">
-          <AboutEventSection />
           <ExpertMeetupSection />
           <VenueAndLocationSection />
           <EventPartnersSection />
+          <CtaCardSection
+            title="Stay in the know"
+            description="Meet the experts, share best practices, and discover the latest innovations shaping the future of APIs."
+          >
+            <div className="flex gap-4 max-sm:flex-col sm:items-center">
+              <Button href={CFP_LINK} variant="primary">
+                Submit a proposal
+              </Button>
+              <Button href={TICKETS_LINK} variant="secondary">
+                Get your tickets
+              </Button>
+            </div>
+          </CtaCardSection>
         </div>
-        <CtaCardSection
-          title="Stay in the know"
-          description="Meet the experts, share best practices, and discover the latest innovations shaping the future of APIs."
-        >
-          <div className="flex gap-4 max-sm:flex-col sm:items-center">
-            <Button href={CFP_LINK} variant="primary">
-              Submit a proposal
-            </Button>
-            <Button href={TICKETS_LINK} variant="secondary">
-              Get your tickets
-            </Button>
-          </div>
-        </CtaCardSection>
       </main>
     </>
   );
@@ -96,23 +96,25 @@ export default function GraphQLDayAtFostPage() {
 
 function AboutEventSection() {
   return (
-    <section className="gql-section flex gap-6 bg-neu-100 max-md:flex-col xl:py-12">
-      <h3 className="typography-h2 md:flex-[.5]">About</h3>
-      <div className="flex flex-col gap-6 md:flex-1">
-        <p className="typography-body-lg">
-          Join us for a special GraphQL Day as part of the Future of Software
-          Week, co‑located with API Days Paris. This focused event brings
-          together GraphQL practitioners, innovators, and thought leaders for a
-          day of deep technical discussions and hands-on learning.
-        </p>
-        <p className="typography-body-lg text-pretty">
-          Whether you're already using GraphQL in production or just getting
-          started, this is your opportunity to connect with the community, share
-          best practices, and discover the latest developments in the GraphQL
-          ecosystem.
-        </p>
-      </div>
-    </section>
+    <div className="bg-neu-100">
+      <section className="gql-section gql-container flex gap-6 max-md:flex-col xl:py-12">
+        <h3 className="typography-h2 md:flex-[.5]">About</h3>
+        <div className="flex flex-col gap-6 md:flex-1">
+          <p className="typography-body-lg">
+            Join us for a special GraphQL Day as part of the Future of Software
+            Week, co‑located with API Days Paris. This focused event brings
+            together GraphQL practitioners, innovators, and thought leaders for
+            a day of deep technical discussions and hands-on learning.
+          </p>
+          <p className="typography-body-lg text-pretty">
+            Whether you're already using GraphQL in production or just getting
+            started, this is your opportunity to connect with the community,
+            share best practices, and discover the latest developments in the
+            GraphQL ecosystem.
+          </p>
+        </div>
+      </section>
+    </div>
   );
 }
 

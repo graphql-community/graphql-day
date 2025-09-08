@@ -60,28 +60,52 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
-/* Utility classes for the design system */
+.gql-focus-visible,
+.gql-all-anchors-focusable a {
+  @apply focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[5px] focus-visible:outline-neu-900;
+}
+
 .gql-container {
-  @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-[120rem];
 }
 
 .gql-section {
-  @apply py-16 lg:py-24;
+  @apply px-4 py-8 lg:px-12 xl:gap-x-24 xl:px-24 3xl:px-[240px];
 }
 
-.gql-focus-visible {
-  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pri-base;
-}
-
-.gql-all-anchors-focusable a {
-  @apply gql-focus-visible;
-}
-
+.gql-navbar-strip,
 .gql-conf-navbar-strip {
-  @apply relative;
+  @apply relative [contain:paint] before:sticky before:top-0 before:z-[9] before:-mt-[var(--navbar-h)] before:block before:h-[var(--navbar-h)] before:w-full before:content-[''];
 }
 
-.gql-conf-navbar-strip::before {
-  content: "";
-  @apply absolute top-0 h-[calc(var(--navbar-h)+1px)] w-full;
+.gql-navbar-strip {
+  --navbar-h: var(--nextra-navbar-height);
+}
+
+.gql-radial-gradient {
+  background-image: radial-gradient(
+    ellipse at 50% 50%,
+    hsl(var(--color-neu-600)) 0%,
+    transparent 75%
+  );
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --navbar-h: 70px;
+}
+
+/* without this Headless UI breaks sticky navbar */
+html:has([role="listbox"][data-open]),
+html:has([role="menu"][data-open]) {
+  overflow: visible !important;
+}
+
+@supports (background: -webkit-named-image(i)) {
+  html {
+    /* Safari moves the fixed Navbar when overscrolling and it looks bad */
+    overscroll-behavior-y: none;
+  }
 }

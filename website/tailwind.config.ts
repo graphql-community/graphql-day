@@ -27,9 +27,7 @@ const config: Config = {
         "3xl": "1920px",
       },
       colors: {
-        primary: "#e10098",
-        "conf-black": "#0e031c",
-        black: "#1b1b1b",
+        black: "#000",
 
         // #region new design system colors
         "pri-lighter": "hsl(var(--color-pri-lighter) / <alpha-value>)",

@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 
 import { Badge } from "./badge";
 
-import { GraphQLConfLogoLink } from "./graphql-conf-logo-link";
 import { Anchor } from "./design-system/anchor";
 import { MenuIcon } from "./design-system/pixelarticons/menu-icon";
 import { CloseIcon } from "./design-system/pixelarticons/close-icon";
 import { TIME_ELEMENT, ADDRESS_ELEMENT } from "../constants";
+import { GraphQLDayLogoLink } from "./logo-link";
 
 export interface NavbarProps {
   links: { href: string; children: React.ReactNode; "aria-disabled"?: true }[];
@@ -61,7 +61,7 @@ export function Navbar({ links, year, date }: NavbarProps): ReactElement {
       >
         <BackdropBlur />
         <div className="flex h-[var(--navbar-h)] items-center justify-between gap-5 px-4 md:px-6 2xl:px-10">
-          <GraphQLConfLogoLink year={year} />
+          <GraphQLDayLogoLink year={year} />
 
           <div className="typography-menu mr-auto flex h-full flex-col justify-center whitespace-pre border-x border-blk/60 px-4 dark:border-white/80 max-xl:hidden">
             <p className="flex items-center gap-2 text-sm">{TIME_ELEMENT}</p>

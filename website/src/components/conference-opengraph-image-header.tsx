@@ -1,7 +1,7 @@
 import { CalendarIcon } from "./design-system/pixelarticons/calendar-icon";
 import { PinIcon } from "./design-system/pixelarticons/pin-icon";
 
-import { GraphQLLogo } from "./graphql-conf-logo-link";
+import { GraphQLDayLogo } from "./graphql-day-logo";
 import {
   colors,
   fonts,
@@ -64,7 +64,7 @@ export function ConferenceOpengraphImageHeader({
                 textTransform: "uppercase",
               }}
             >
-              <GraphQLLogo
+              <GraphQLDayLogo
                 style={{
                   height: "3rem",
                   width: "3rem",
