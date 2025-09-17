@@ -11,7 +11,7 @@ import { HeroImageProper } from "./hero-image-proper";
 import heroPhoto from "./hero-photo.webp";
 
 export const metadata: Metadata = {
-  title: "GraphQL Day at FOST",
+  title: "GraphQL Day at apidays",
 };
 
 export default function GraphQLDayAtFostPage() {
@@ -19,7 +19,7 @@ export default function GraphQLDayAtFostPage() {
     <>
       <NavbarPlaceholder className="top-0 bg-neu-100 before:bg-white/30 dark:bg-[#181A12] dark:before:bg-blk/40" />
       <Hero
-        pageName="GraphQL Day at FOST"
+        pageName="GraphQL Day at apidays"
         subtitle="Future Of Software Technology"
         colorScheme="neutral"
         stripes={
