@@ -49,7 +49,7 @@ export function ConferenceOpengraphImageHeader({
               fontWeight: "normal",
               textTransform: "uppercase",
               lineHeight: "1",
-              color: colors.neu900,
+              color: colors.neu0,
             }}
           >
             <div
@@ -124,7 +124,7 @@ export function ConferenceOpengraphImageHeader({
                 fontWeight: "normal",
                 textTransform: "uppercase",
                 lineHeight: "1.2",
-                color: colors.neu900,
+                color: colors.neu0,
               }}
             >
               {date}, {year}
@@ -160,7 +160,7 @@ export function ConferenceOpengraphImageHeader({
                 fontWeight: "normal",
                 textTransform: "uppercase",
                 lineHeight: "1.2",
-                color: colors.neu900,
+                color: colors.neu0,
               }}
             >
               {location}

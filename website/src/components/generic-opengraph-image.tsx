@@ -68,7 +68,7 @@ export function GenericOpengraphImage({
         overflow: "hidden",
         borderWidth: "2px",
         borderColor: colors.neu600,
-        backgroundColor: colors.neu100,
+        backgroundColor: colors.neu900,
         fontFamily: fonts.sans,
       }}
       {...rest}
@@ -94,7 +94,7 @@ export function GenericOpengraphImage({
             margin: 0,
             fontFamily: fonts.sans,
             lineHeight: "1.25",
-            color: colors.neu900,
+            color: colors.neu0,
             fontSize: "96px",
           }}
         >
