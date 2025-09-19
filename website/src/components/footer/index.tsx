@@ -22,7 +22,7 @@ export function Footer({
   return (
     <footer className="gql-all-anchors-focusable typography-menu relative !bg-neu-100 text-neu-900 dark:!bg-neu-0 max-md:px-0 max-md:pt-0">
       <Stripes />
-      <div className="flex flex-wrap justify-between gap-4 p-4 max-md:w-full md:px-6 lg:py-10 2xl:px-10">
+      <div className="flex flex-wrap justify-between gap-4 p-4 max-md:w-full md:px-6 2xl:px-10">
         {logo}
         <div className="typography-body-lg flex gap-x-4 max-sm:grid max-sm:grid-cols-2 max-sm:items-start max-sm:text-lg sm:gap-y-2">
           <p className="flex items-center whitespace-pre">{TIME_ELEMENT}</p>
@@ -99,7 +99,7 @@ function FooterBox({ box }: { box: FooterLink | FooterLink[] }) {
             href={link.href}
             title={link.disabled ? "Coming soon" : undefined}
             className={clsx(
-              "gql-focus-visible block h-full p-3 first:font-bold",
+              "gql-focus-visible block h-full p-3",
               link.disabled
                 ? "pointer-events-none"
                 : "underline-offset-4 hover:underline",

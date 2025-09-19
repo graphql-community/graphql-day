@@ -14,11 +14,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
-          `var(--font-sans, ${fontFamily.sans.slice(0, 3).join(", ")})`,
-          ...fontFamily.sans,
-        ],
-        mono: [
-          `var(--font-mono, ${fontFamily.mono.slice(0, 3).join(", ")})`,
+          `var(--font-sans, ${fontFamily.mono.slice(0, 3).join(", ")})`,
           ...fontFamily.mono,
         ],
       },
@@ -111,6 +107,7 @@ const config: Config = {
       addBase({
         ".typography-d1, .typography-h1, .typography-h2, .typography-h3": {
           lineHeight: "1.2",
+          fontFamily: "var(--font-sans)",
         },
         ".typography-d1": {
           fontSize: "48px",
@@ -180,7 +177,7 @@ const config: Config = {
           textTransform: "uppercase",
         },
         ".typography-menu": {
-          fontFamily: "var(--font-mono)",
+          fontFamily: "var(--font-karrik)",
           fontSize: "14px",
           lineHeight: "1",
           textTransform: "uppercase",

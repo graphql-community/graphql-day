@@ -101,7 +101,7 @@ function AboutEventSection() {
     <div className="bg-neu-100">
       <section className="gql-section gql-container flex gap-6 max-md:flex-col xl:py-12">
         <h3 className="typography-h2 md:flex-[.5]">About</h3>
-        <div className="flex flex-col gap-6 md:flex-1">
+        <div className="flex flex-col gap-6 md:flex-1 text-neu-800">
           <p className="typography-body-lg">
             Join us for a special GraphQL Day as part of the Future of Software
             Technology, co‑located with API Days Paris. This focused event
@@ -241,7 +241,7 @@ function VenueAndLocationSection() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="mt-4"
+        className="mt-4 select-none"
       />
     </section>
   );

@@ -41,12 +41,6 @@ export default function RootLayout({
           links={[
             { children: "Submit a talk", href: CFP_LINK },
             { children: "Get a ticket", href: TICKETS_LINK },
-            // todo: ?
-            // { children: "Schedule", href: "/conf/2025/schedule" },
-            // { children: "Speakers", href: "/conf/2025/speakers" },
-            // { children: "Sponsors", href: "/#sponsors" },
-            // { children: "Resources", href: "/resources" },
-            // { children: "FAQ", href: "/#faq" },
           ]}
         />
         {children}
