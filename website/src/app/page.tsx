@@ -173,13 +173,13 @@ function VenueAndLocationSection() {
           <h4 className="typography-h3">
             Centre of New Industries and Technologies
           </h4>
-          <p className="typography-body-lg">
+          <p className="typography-body-lg text-neu-800">
             Located in Puteaux, commune in the western suburbs of Paris, CNIT is
             an iconic venue offering state-of-the-art facilities and easy access
             to public transportation, making it perfect for technology
             conferences.
           </p>
-          <div className="typography-body-lg">
+          <div className="typography-body-lg text-neu-800">
             <address className="not-italic">
               Centre des nouvelles industries et technologies
               <br />
