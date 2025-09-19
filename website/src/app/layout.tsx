@@ -53,21 +53,14 @@ export default function RootLayout({
         <Footer
           logo={<GraphQLDayLogoLink year={2025} />}
           links={[
-            { children: "Sponsor", href: "/conf/2025/#sponsors" },
-            { children: "Speakers", href: "/#speakers" },
-            { children: "GraphQLConf 2024", href: "/conf/2024" },
-            { children: "FAQ", href: "#faq" },
-            { children: "Contact Us", href: "/conf/2025/resources/#contact" },
-            { children: "GraphQL", href: "/" },
-            { children: "GraphQL Foundation", href: "/foundation" },
+            {
+              children: "apiDays Paris",
+              href: "https://www.apidays.global/events/paris",
+            },
             [
               {
                 children: "Code of Conduct",
-                href: "/conf/2025/code-of-conduct",
-              },
-              {
-                children: "Inclusion & Accessibility",
-                href: "/conf/2025/resources/#inclusion--accessibility",
+                href: "https://www.apidays.global/legal/code-of-conduct#:~:text=Individuals%20who%20participate%20(or%20plan,during%20or%20after%20the%20event.",
               },
             ],
           ]}

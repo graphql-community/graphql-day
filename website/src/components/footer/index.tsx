@@ -3,8 +3,6 @@ import NextLink from "next/link";
 import { ReactNode } from "react";
 
 import { ADDRESS_ELEMENT, TIME_ELEMENT } from "../../constants";
-// TODO
-// import { SocialIcons } from "../../../_components/social-icons";
 import { StripesDecoration } from "../design-system/stripes-decoration";
 import blurBean from "./blur-bean.webp";
 
@@ -31,7 +29,12 @@ export function Footer({
           <address className="not-italic">{ADDRESS_ELEMENT}</address>
         </div>
       </div>
-      <ul className="grid grid-cols-2 gap-px bg-neu-400 py-px dark:bg-neu-100 lg:grid-cols-4">
+      <ul
+        className={clsx(
+          "grid grid-cols-2 gap-px bg-neu-400 py-px dark:bg-neu-100",
+          links.length >= 4 ? "lg:grid-cols-4" : "",
+        )}
+      >
         {links.map((box, i) => (
           <li className="bg-neu-100 dark:bg-neu-0 lg:h-32" key={i}>
             <FooterBox box={box} />
@@ -40,25 +43,8 @@ export function Footer({
       </ul>
       <div className="relative flex justify-between gap-10 p-4 text-sm max-lg:flex-col md:px-6 2xl:px-10">
         <div className="flex flex-col font-light max-md:gap-5">
-          <p>
-            Copyright © {new Date().getFullYear()} The GraphQL Foundation. All
-            rights reserved.
-          </p>
-          <p>
-            For web site terms of use, trademark policy and general project
-            policies please see{" "}
-            <a
-              href="https://lfprojects.org"
-              target="_blank"
-              rel="noreferrer"
-              className="typography-link"
-            >
-              https://lfprojects.org
-            </a>
-            .
-          </p>
+          <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
         </div>
-        {/* TODO: <SocialIcons className="[&>a:focus]:text-current [&>a:focus]:ring-transparent [&>a:hover]:bg-neu-900/10 [&>a:hover]:text-current" /> */}
       </div>
     </footer>
   );
@@ -69,8 +55,6 @@ function Stripes() {
     <div
       role="presentation"
       // prettier-ignore
-      // false positive
-      // eslint-disable-next-line tailwindcss/no-contradicting-classname
       className="pointer-events-none absolute inset-0
         [--start-1:rgba(255,204,239,.05)]
         [--end-1:hsl(var(--color-pri-base)/.8)]
@@ -118,7 +102,7 @@ function FooterBox({ box }: { box: FooterLink | FooterLink[] }) {
               "gql-focus-visible block h-full p-3 first:font-bold",
               link.disabled
                 ? "pointer-events-none"
-                : "underline-offset-4 hover:underline"
+                : "underline-offset-4 hover:underline",
             )}
             tabIndex={link.disabled ? -1 : undefined}
           >
@@ -137,7 +121,7 @@ function FooterBox({ box }: { box: FooterLink | FooterLink[] }) {
       title={disabled ? "Coming soon" : undefined}
       className={clsx(
         "gql-focus-visible relative block h-full p-4 pb-8 md:p-6 2xl:px-10",
-        disabled ? "pointer-events-none" : "underline-offset-4 hover:underline"
+        disabled ? "pointer-events-none" : "underline-offset-4 hover:underline",
       )}
       tabIndex={disabled ? -1 : undefined}
     >
