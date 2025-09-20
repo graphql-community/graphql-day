@@ -11,7 +11,7 @@ import { HeroImageProper } from "./hero-image-proper";
 import heroPhoto from "./hero-photo.webp";
 
 export const metadata: Metadata = {
-  title: "GraphQL Day at FOST",
+  title: "GraphQL Day at apidays",
 };
 
 export default function GraphQLDayAtFostPage() {
@@ -19,7 +19,7 @@ export default function GraphQLDayAtFostPage() {
     <>
       <NavbarPlaceholder className="top-0 bg-neu-100 before:bg-white/30 dark:bg-[#181A12] dark:before:bg-blk/40" />
       <Hero
-        pageName="GraphQL Day at FOST"
+        pageName="GraphQL Day at apidays"
         subtitle="Future Of Software Technology"
         colorScheme="neutral"
         stripes={
@@ -70,6 +70,7 @@ export default function GraphQLDayAtFostPage() {
       <main className="gql-all-anchors-focusable gql-conf-navbar-strip text-neu-900 before:bg-white/40 before:dark:bg-blk/30">
         <AboutEventSection />
         <div className="gql-container">
+          <BecomeASpeakerSection />
           <ExpertMeetupSection />
           <VenueAndLocationSection />
           <EventPartnersSection />
@@ -103,9 +104,11 @@ function AboutEventSection() {
         <h3 className="typography-h2 md:flex-[.5]">About</h3>
         <div className="flex flex-col gap-6 md:flex-1 text-neu-800">
           <p className="typography-body-lg">
-            Join us for a special GraphQL Day as part of the Future of Software
-            Technology, co‑located with API Days Paris. This focused event
-            brings together GraphQL practitioners, innovators, and thought
+            GraphQL day is a one day event organized by the community
+            for the community, co‑located with apidays Paris.
+          </p>
+          <p className="typography-body-lg">
+            This focused event brings together GraphQL practitioners, innovators, and thought
             leaders for a day of deep technical discussions and hands-on
             learning.
           </p>
@@ -174,7 +177,7 @@ function VenueAndLocationSection() {
             Centre of New Industries and Technologies
           </h4>
           <p className="typography-body-lg text-neu-800">
-            Located in Puteaux, commune in the western suburbs of Paris, CNIT is
+            Located in Puteaux, at the doorstep of Paris, CNIT is
             an iconic venue offering state-of-the-art facilities and easy access
             to public transportation, making it perfect for technology
             conferences.
@@ -247,6 +250,38 @@ function VenueAndLocationSection() {
   );
 }
 
+function BecomeASpeakerSection() {
+  return (
+    <section className="gql-section xl:py-12">
+      <h3 className="typography-h2 mb-12">Become a speaker</h3>
+      <div className="flex gap-x-12 gap-y-10 max-lg:flex-col">
+        <article className="flex flex-col gap-6 lg:flex-1">
+          <p className="typography-body-lg">
+            Any GraphQL topic is welcome: feedback from the trenches, introductions, 
+            technical deep-dives, workshop, lightning talk and more! Submit your talk 
+            using the <a href={CFP_LINK} className="typography-link">apidays typeform</a>.
+          </p>
+          <p className="typography-body-lg">
+            The apidays audience includes
+            non-GraphQL experts from other communities (AsyncAPI, OpenAPI, JSON schema, ...) as well
+            as CTOs and business deciders. Submissions that address this diverse audience are especially appreciated. You can 
+            read more in the <a href="https://www.apidays.global/speaker-guidelines" className="typography-link">apidays speaker guidelines</a>.
+          </p>
+
+          <p className="typography-body-lg">
+            The CFP closes on Oct. 12th.
+          </p>
+
+          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
+            Submit a proposal
+          </Button>
+
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function EventPartnersSection() {
   return (
     <section className="gql-section">
@@ -261,7 +296,7 @@ function EventPartnersSection() {
               >
                 <img
                   src="https://cdn.prod.website-files.com/67a0938d08d1902cd6974340/68112b11f6895235885793a7_Apidays%20logo%20v2.png"
-                  alt="API Days"
+                  alt="apidays"
                   className="h-24 w-auto object-contain invert dark:invert-0"
                 />
               </Anchor>
