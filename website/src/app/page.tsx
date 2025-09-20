@@ -105,7 +105,7 @@ function AboutEventSection() {
         <div className="flex flex-col gap-6 md:flex-1 text-neu-800">
           <p className="typography-body-lg">
             GraphQL day is a one day event organized by the community
-            for the community, co‑located with API Days Paris.
+            for the community, co‑located with apidays Paris.
           </p>
           <p className="typography-body-lg">
             This focused event brings together GraphQL practitioners, innovators, and thought
@@ -296,7 +296,7 @@ function EventPartnersSection() {
               >
                 <img
                   src="https://cdn.prod.website-files.com/67a0938d08d1902cd6974340/68112b11f6895235885793a7_Apidays%20logo%20v2.png"
-                  alt="API Days"
+                  alt="apidays"
                   className="h-24 w-auto object-contain invert dark:invert-0"
                 />
               </Anchor>
