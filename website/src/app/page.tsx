@@ -305,8 +305,7 @@ function EventPartnersSection() {
         </div>
 
         <p className="typography-body-lg mx-auto max-w-2xl text-pretty text-center">
-          GraphQL Day is organized by API&nbsp;Days as part of the Future of
-          Software Technology.
+          GraphQL Day is organized by the community for the community and hosted by apidays Paris.
           {/* todo: link to some FOST page? */}
         </p>
       </div>
