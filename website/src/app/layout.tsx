@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth antialiased">
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <style>{`html { scroll-padding-top: 5rem }`}</style>
         <NewFontsStyleTag />
       </head>
