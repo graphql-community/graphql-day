@@ -269,7 +269,7 @@ function BecomeASpeakerSection() {
           </p>
 
           <p className="typography-body-lg">
-            The CFP closes on Oct. 12th.
+            The CFP closes on Oct. 26th, 23:59 CET.
           </p>
 
           <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
