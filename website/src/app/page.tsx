@@ -267,6 +267,9 @@ function BecomeASpeakerSection() {
             as CTOs and business deciders. Submissions that address this diverse audience are especially appreciated. You can 
             read more in the <a href="https://www.apidays.global/speaker-guidelines" className="typography-link">apidays speaker guidelines</a>.
           </p>
+          <p className="typography-body-lg">
+              The talks are not recorded live but you may record a talk in advance that will be made available after the conference.
+          </p>
 
           <p className="typography-body-lg">
             The CFP closes on Oct. 26th, 23:59 CET.
