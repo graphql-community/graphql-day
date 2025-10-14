@@ -20,7 +20,7 @@ export function GraphQLDayLogoLink({
       {...rest}
     >
       <GraphQLDayLogo className="h-6" />
-      GraphQL Day {year}
+      GraphQL Day 2025
     </NextLink>
   );
 }
