@@ -105,7 +105,7 @@ function AboutEventSection() {
         <div className="flex flex-col gap-6 md:flex-1 text-neu-800">
           <p className="typography-body-lg">
             GraphQL day is a one day event organized by the community
-            for the community, co‑located with apidays Paris.
+            for the community, hosted by apidays Paris.
           </p>
           <p className="typography-body-lg">
             This focused event brings together GraphQL practitioners, innovators, and thought
@@ -258,8 +258,8 @@ function BecomeASpeakerSection() {
         <article className="flex flex-col gap-6 lg:flex-1">
           <p className="typography-body-lg">
             Any GraphQL topic is welcome: feedback from the trenches, introductions, 
-            technical deep-dives, workshop, lightning talk and more! Submit your talk 
-            using the <a href={CFP_LINK} className="typography-link">apidays typeform</a>.
+            technical deep-dives, workshops, lightning talk and more! Submit your talk
+            using the <a href={CFP_LINK} className="typography-link">dedicated form</a>.
           </p>
           <p className="typography-body-lg">
             The apidays audience includes
@@ -268,7 +268,7 @@ function BecomeASpeakerSection() {
             read more in the <a href="https://www.apidays.global/speaker-guidelines" className="typography-link">apidays speaker guidelines</a>.
           </p>
           <p className="typography-body-lg">
-              The talks are not recorded live but you may record a talk in advance that will be made available after the conference.
+              The talks are not recorded live but you may record a talk in advance that will be made available after the conference. All speakers will get a free conference ticket.
           </p>
 
           <p className="typography-body-lg">
