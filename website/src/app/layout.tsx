@@ -46,7 +46,7 @@ export default function RootLayout({
         />
         {children}
         <Footer
-          logo={<GraphQLDayLogoLink year={2025} />}
+          logo={<GraphQLDayLogoLink />}
           links={[
             {
               children: "apiDays Paris",

@@ -47,19 +47,19 @@ export function Navbar({ links, year }: NavbarProps): ReactElement {
       <div
         className={clsx(
           "top-0 w-full scale-y-105 bg-pri-base dark:bg-pri-darker",
-          mobileDrawerOpen ? "static" : "absolute",
+          mobileDrawerOpen ? "static" : "absolute"
         )}
       />
       <NavbarPlaceholder className="bg-pri-base before:bg-white/30 dark:bg-pri-darker dark:before:bg-blk/40" />
       <header
         className={clsx(
           "gql-all-anchors-focusable sticky top-0 z-[100] w-full border-b border-blk/60 font-special text-neu-900 antialiased dark:border-white/80",
-          mobileDrawerOpen && "!border-neu-900 dark:!border-white",
+          mobileDrawerOpen && "!border-neu-900 dark:!border-white"
         )}
       >
         <BackdropBlur />
         <div className="flex h-[var(--navbar-h)] items-center justify-between gap-5 px-4 md:px-6 2xl:px-10">
-          <GraphQLDayLogoLink year={year} />
+          <GraphQLDayLogoLink />
 
           <div className="typography-menu mr-auto flex h-full flex-col justify-center whitespace-pre border-x border-blk/60 px-4 dark:border-white/80 max-xl:hidden">
             <p className="flex items-center gap-2 text-sm">{TIME_ELEMENT}</p>
@@ -77,7 +77,7 @@ export function Navbar({ links, year }: NavbarProps): ReactElement {
           <nav
             className={clsx(
               "typography-menu inset-0 z-20 flex gap-7 max-lg:fixed max-lg:mt-[calc(var(--navbar-h)+1px)] max-lg:flex-col max-md:min-w-[50%] sm:max-lg:p-4 lg:items-end",
-              mobileDrawerOpen ? "translate-x-0" : "max-lg:translate-x-full",
+              mobileDrawerOpen ? "translate-x-0" : "max-lg:translate-x-full"
             )}
           >
             <div className="flex w-full flex-col lg:mt-0 lg:block">
@@ -89,7 +89,7 @@ export function Navbar({ links, year }: NavbarProps): ReactElement {
                     {...link}
                     className={clsx(
                       "p-5 underline-offset-4 hover:underline aria-disabled:pointer-events-none max-lg:text-base",
-                      pathname === link.href && "underline",
+                      pathname === link.href && "underline"
                     )}
                     onClick={() => {
                       if (mobileDrawerOpen) {
@@ -104,7 +104,7 @@ export function Navbar({ links, year }: NavbarProps): ReactElement {
                       </sup>
                     )}
                   </Anchor>
-                ),
+                )
               )}
             </div>
           </nav>
@@ -145,7 +145,7 @@ export function NavbarPlaceholder({
       // placeholder: the colors here on `before` must match the ones on Hero `before` strip
       className={clsx(
         "absolute h-[calc(var(--navbar-h)+1px)] w-full before:absolute before:top-0 before:h-[calc(var(--navbar-h)+1px)] before:w-full",
-        className,
+        className
       )}
       {...rest}
     />
