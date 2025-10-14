@@ -13,10 +13,9 @@ import { GraphQLDayLogoLink } from "./logo-link";
 
 export interface NavbarProps {
   links: { href: string; children: React.ReactNode; "aria-disabled"?: true }[];
-  year: number;
 }
 
-export function Navbar({ links, year }: NavbarProps): ReactElement {
+export function Navbar({ links }: NavbarProps): ReactElement {
   const pathname = usePathname();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 

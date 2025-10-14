@@ -38,7 +38,6 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar
-          year={2025}
           links={[
             { children: "Submit a talk", href: CFP_LINK },
             { children: "Get a ticket", href: TICKETS_LINK },
