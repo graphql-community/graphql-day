@@ -314,7 +314,7 @@ function EventPartnersSection() {
               >
                 <img
                   src={devEvents.src}
-                  alt="apidays"
+                  alt="dev.events"
                   className="h-24 w-auto object-contain"
                 />
               </Anchor>
