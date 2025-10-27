@@ -9,6 +9,7 @@ import { NavbarPlaceholder } from "../components/navbar";
 import { CFP_LINK, TICKETS_LINK } from "../constants";
 import { HeroImageProper } from "./hero-image-proper";
 import heroPhoto from "./hero-photo.webp";
+import devEvents from "./dev_events.svg";
 
 export const metadata: Metadata = {
   title: "GraphQL Day at apidays",
@@ -257,14 +258,14 @@ function BecomeASpeakerSection() {
       <div className="flex gap-x-12 gap-y-10 max-lg:flex-col">
         <article className="flex flex-col gap-6 lg:flex-1">
           <p className="typography-body-lg">
-            Any GraphQL topic is welcome: feedback from the trenches, introductions, 
+            Any GraphQL topic is welcome: feedback from the trenches, introductions,
             technical deep-dives, workshops, lightning talk and more! Submit your talk
             using the <a href={CFP_LINK} className="typography-link">dedicated form</a>.
           </p>
           <p className="typography-body-lg">
             The apidays audience includes
             non-GraphQL experts from other communities (AsyncAPI, OpenAPI, JSON schema, ...) as well
-            as CTOs and business deciders. Submissions that address this diverse audience are especially appreciated. You can 
+            as CTOs and business deciders. Submissions that address this diverse audience are especially appreciated. You can
             read more in the <a href="https://www.apidays.global/speaker-guidelines" className="typography-link">apidays speaker guidelines</a>.
           </p>
           <p className="typography-body-lg">
@@ -301,6 +302,20 @@ function EventPartnersSection() {
                   src="https://cdn.prod.website-files.com/67a0938d08d1902cd6974340/68112b11f6895235885793a7_Apidays%20logo%20v2.png"
                   alt="apidays"
                   className="h-24 w-auto object-contain invert dark:invert-0"
+                />
+              </Anchor>
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-12 max-md:flex-col md:gap-16">
+            <div className="flex items-center justify-center">
+              <Anchor
+                href="https://dev.events/"
+                className="p-8 hover:bg-neu-100"
+              >
+                <img
+                  src={devEvents.src}
+                  alt="apidays"
+                  className="h-24 w-auto object-contain"
                 />
               </Anchor>
             </div>
