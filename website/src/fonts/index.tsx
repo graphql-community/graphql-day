@@ -1,14 +1,26 @@
 import localFont from "next/font/local";
 
-export const bbbKarrik = localFont({
-  src: "./BBB_Karrik.woff2",
+export const switzer = localFont({
+  src: [
+    {
+      path: "./Switzer-Variable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./Switzer-VariableItalic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
 });
 
-const newFontsStyles = /* css */ `
+const fontStyles = /* css */ `
 html {
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}`;
+  --font-sans: ${switzer.style.fontFamily}, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+`;
 
-export const NewFontsStyleTag = () => {
-  return <style dangerouslySetInnerHTML={{ __html: newFontsStyles }} />;
+export const FontStyleTag = () => {
+  return <style dangerouslySetInnerHTML={{ __html: fontStyles }} />;
 };

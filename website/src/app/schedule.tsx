@@ -202,14 +202,16 @@ export function ScheduleSection() {
   return (
     <section className="gql-section xl:py-12" id="schedule">
       <div className="gql-container">
-        <h3 className="typography-h2 mb-12">Schedule</h3>
-        <div className="flex flex-col gap-8">
+        <header className="mb-8">
+          <h3 className="typography-menu mb-4">Schedule</h3>
           <div className="flex flex-col gap-2">
-            <div className="typography-h3">December 11</div>
+            <div className="typography-h2">December 11</div>
             <div className="typography-body-lg text-neu-700">
               Room: Aubepine 1/2
             </div>
           </div>
+        </header>
+        <div className="flex flex-col">
           <div className="flex flex-col">
             {SCHEDULE.map((item, index) => (
               <div
@@ -219,11 +221,11 @@ export function ScheduleSection() {
                   item.type === "break" && "bg-neu-100"
                 )}
               >
-                <div className="typography-menu min-w-[160px] font-medium text-neu-700 whitespace-nowrap">
+                <div className="typography-menu min-w-[160px] text-neu-700 whitespace-nowrap">
                   {item.time}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className="typography-h3 text-xl font-bold text-neu-900">
+                  <h4 className="typography-h3 text-xl text-neu-900">
                     {item.title}
                   </h4>
                   {item.description && (

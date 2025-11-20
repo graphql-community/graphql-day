@@ -7,7 +7,7 @@ import { Footer } from "../components/footer";
 import { GraphQLDayLogoLink } from "../components/logo-link";
 import { Navbar } from "../components/navbar";
 import { TICKETS_LINK } from "../constants";
-import { NewFontsStyleTag } from "../fonts";
+import { FontStyleTag } from "../fonts";
 
 export const metadata: Metadata = {
   twitter: {
@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <style>{`html { scroll-padding-top: 5rem }`}</style>
-        <NewFontsStyleTag />
+        <FontStyleTag />
       </head>
       <body>
         <Navbar

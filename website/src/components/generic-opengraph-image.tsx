@@ -32,8 +32,8 @@ export const colors = {
 };
 
 export const fonts = {
-  sans: "var(--font-sans)",
-  mono: "var(--font-karrik)",
+  sans: "Switzer",
+  mono: "Switzer",
 };
 
 export const RIGHT_COLUMN_WIDTH_PX = 476;
