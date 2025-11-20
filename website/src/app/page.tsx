@@ -7,6 +7,7 @@ import { Button } from "../components/design-system/button";
 import { Hero, HeroDateAndLocation, HeroStripes } from "../components/hero";
 import { NavbarPlaceholder } from "../components/navbar";
 import { CFP_LINK, TICKETS_LINK } from "../constants";
+import devEvents from "./dev_events.svg";
 import { HeroImageProper } from "./hero-image-proper";
 import heroPhoto from "./hero-photo.webp";
 import { ScheduleSection } from "./schedule";
@@ -286,7 +287,7 @@ function BecomeASpeakerSection() {
           </p>
 
           <p className="typography-body-lg">
-            The CFP closes on Oct. 26th, 23:59 CET.
+            The CFP closes on Oct. 30th, 12:00pm CET.
           </p>
 
           <Button
@@ -318,6 +319,20 @@ function EventPartnersSection() {
                   src="https://cdn.prod.website-files.com/67a0938d08d1902cd6974340/68112b11f6895235885793a7_Apidays%20logo%20v2.png"
                   alt="apidays"
                   className="h-24 w-auto object-contain invert dark:invert-0"
+                />
+              </Anchor>
+            </div>
+          </div>
+          <div className="flex items-center justify-center gap-12 max-md:flex-col md:gap-16">
+            <div className="flex items-center justify-center">
+              <Anchor
+                href="https://dev.events/"
+                className="p-8 hover:bg-neu-100"
+              >
+                <img
+                  src={devEvents.src}
+                  alt="dev.events"
+                  className="h-24 w-auto object-contain"
                 />
               </Anchor>
             </div>
