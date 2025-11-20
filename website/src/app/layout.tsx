@@ -6,7 +6,7 @@ import { ReactElement, ReactNode } from "react";
 import { Footer } from "../components/footer";
 import { GraphQLDayLogoLink } from "../components/logo-link";
 import { Navbar } from "../components/navbar";
-import { CFP_LINK, TICKETS_LINK } from "../constants";
+import { TICKETS_LINK } from "../constants";
 import { NewFontsStyleTag } from "../fonts";
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
       <body>
         <Navbar
           links={[
-            { children: "Submit a talk", href: CFP_LINK },
+            { children: "See the schedule", href: "#schedule" },
             { children: "Get a ticket", href: TICKETS_LINK },
           ]}
         />

@@ -7,9 +7,10 @@ import { Button } from "../components/design-system/button";
 import { Hero, HeroDateAndLocation, HeroStripes } from "../components/hero";
 import { NavbarPlaceholder } from "../components/navbar";
 import { CFP_LINK, TICKETS_LINK } from "../constants";
+import devEvents from "./dev_events.svg";
 import { HeroImageProper } from "./hero-image-proper";
 import heroPhoto from "./hero-photo.webp";
-import devEvents from "./dev_events.svg";
+import { ScheduleSection } from "./schedule";
 
 export const metadata: Metadata = {
   title: "GraphQL Day at apidays",
@@ -56,8 +57,8 @@ export default function GraphQLDayAtFostPage() {
       >
         <HeroDateAndLocation />
         <div className="flex items-center gap-x-4 gap-y-2 flex-wrap max-sm:*:flex-1">
-          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
-            Submit a proposal
+          <Button href="#schedule" className="md:w-fit whitespace-nowrap">
+            See the schedule
           </Button>
           <Button
             className="backdrop-blur-xl md:w-fit whitespace-nowrap"
@@ -71,6 +72,7 @@ export default function GraphQLDayAtFostPage() {
       <main className="gql-all-anchors-focusable gql-conf-navbar-strip text-neu-900 before:bg-white/40 before:dark:bg-blk/30">
         <AboutEventSection />
         <div className="gql-container">
+          <ScheduleSection />
           <BecomeASpeakerSection />
           <ExpertMeetupSection />
           <VenueAndLocationSection />
@@ -81,11 +83,11 @@ export default function GraphQLDayAtFostPage() {
           >
             <div className="flex gap-4 flex-wrap sm:items-center *:flex-1">
               <Button
-                href={CFP_LINK}
+                href="#schedule"
                 variant="primary"
                 className="whitespace-nowrap"
               >
-                Submit a proposal
+                See the schedule
               </Button>
               <Button href={TICKETS_LINK} variant="secondary">
                 Get your tickets
@@ -105,13 +107,13 @@ function AboutEventSection() {
         <h3 className="typography-h2 md:flex-[.5]">About</h3>
         <div className="flex flex-col gap-6 md:flex-1 text-neu-800">
           <p className="typography-body-lg">
-            GraphQL day is a one day event organized by the community
-            for the community, hosted by apidays Paris.
+            GraphQL day is a one day event organized by the community for the
+            community, hosted by apidays Paris.
           </p>
           <p className="typography-body-lg">
-            This focused event brings together GraphQL practitioners, innovators, and thought
-            leaders for a day of deep technical discussions and hands-on
-            learning.
+            This focused event brings together GraphQL practitioners,
+            innovators, and thought leaders for a day of deep technical
+            discussions and hands-on learning.
           </p>
           <p className="typography-body-lg text-pretty">
             Whether you're already using GraphQL in production or just getting
@@ -178,10 +180,9 @@ function VenueAndLocationSection() {
             Centre of New Industries and Technologies
           </h4>
           <p className="typography-body-lg text-neu-800">
-            Located in Puteaux, at the doorstep of Paris, CNIT is
-            an iconic venue offering state-of-the-art facilities and easy access
-            to public transportation, making it perfect for technology
-            conferences.
+            Located in Puteaux, at the doorstep of Paris, CNIT is an iconic
+            venue offering state-of-the-art facilities and easy access to public
+            transportation, making it perfect for technology conferences.
           </p>
           <div className="typography-body-lg text-neu-800">
             <address className="not-italic">
@@ -258,28 +259,44 @@ function BecomeASpeakerSection() {
       <div className="flex gap-x-12 gap-y-10 max-lg:flex-col">
         <article className="flex flex-col gap-6 lg:flex-1">
           <p className="typography-body-lg">
-            Any GraphQL topic is welcome: feedback from the trenches, introductions,
-            technical deep-dives, workshops, lightning talk and more! Submit your talk
-            using the <a href={CFP_LINK} className="typography-link">dedicated form</a>.
+            Any GraphQL topic is welcome: feedback from the trenches,
+            introductions, technical deep-dives, workshops, lightning talk and
+            more! Submit your talk using the{" "}
+            <a href={CFP_LINK} className="typography-link">
+              dedicated form
+            </a>
+            .
           </p>
           <p className="typography-body-lg">
-            The apidays audience includes
-            non-GraphQL experts from other communities (AsyncAPI, OpenAPI, JSON schema, ...) as well
-            as CTOs and business deciders. Submissions that address this diverse audience are especially appreciated. You can
-            read more in the <a href="https://www.apidays.global/speaker-guidelines" className="typography-link">apidays speaker guidelines</a>.
+            The apidays audience includes non-GraphQL experts from other
+            communities (AsyncAPI, OpenAPI, JSON schema, ...) as well as CTOs
+            and business deciders. Submissions that address this diverse
+            audience are especially appreciated. You can read more in the{" "}
+            <a
+              href="https://www.apidays.global/speaker-guidelines"
+              className="typography-link"
+            >
+              apidays speaker guidelines
+            </a>
+            .
           </p>
           <p className="typography-body-lg">
-              The talks are not recorded live but you may record a talk in advance that will be made available after the conference. All speakers will get a free conference ticket.
+            The talks are not recorded live but you may record a talk in advance
+            that will be made available after the conference. All speakers will
+            get a free conference ticket.
           </p>
 
           <p className="typography-body-lg">
             The CFP closes on Oct. 30th, 12:00pm CET.
           </p>
 
-          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
-            Submit a proposal
+          <Button
+            href={CFP_LINK}
+            className="md:w-fit whitespace-nowrap"
+            disabled
+          >
+            CFP Closed
           </Button>
-
         </article>
       </div>
     </section>
@@ -323,7 +340,8 @@ function EventPartnersSection() {
         </div>
 
         <p className="typography-body-lg mx-auto max-w-2xl text-pretty text-center">
-          GraphQL Day is organized by the community for the community and hosted by apidays Paris.
+          GraphQL Day is organized by the community for the community and hosted
+          by apidays Paris.
           {/* todo: link to some FOST page? */}
         </p>
       </div>

@@ -32,8 +32,8 @@ export const colors = {
 };
 
 export const fonts = {
-  sans: "'Host Grotesk', var(--font-sans)",
-  mono: "'Commit Mono', var(--font-karrik)",
+  sans: "var(--font-sans)",
+  mono: "var(--font-karrik)",
 };
 
 export const RIGHT_COLUMN_WIDTH_PX = 476;
