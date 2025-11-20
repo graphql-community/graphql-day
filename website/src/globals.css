@@ -3,101 +3,108 @@
 @import "tailwindcss/utilities";
 
 :root {
-    --color-pri-lighter: 319 100% 90%;
-    --color-pri-light: 318 100% 80%;
-    --color-pri-base: 319 100% 44.1%;
-    --color-pri-dark: 319 100% 30%;
-    --color-pri-darker: 319 100% 20%;
+  --color-pri-lighter: 319 100% 90%;
+  --color-pri-light: 318 100% 80%;
+  --color-pri-base: 319 100% 44.1%;
+  --color-pri-dark: 319 100% 30%;
+  --color-pri-darker: 319 100% 20%;
 
-    --color-sec-lighter: 181deg 74% 80%;
-    --color-sec-light: 181deg 98% 67%;
-    --color-sec-base: 181deg 98% 37%;
-    --color-sec-dark: 181deg 98% 27%;
-    --color-sec-darker: 181deg 98% 17%;
+  --color-sec-lighter: 181deg 74% 80%;
+  --color-sec-light: 181deg 98% 67%;
+  --color-sec-base: 181deg 98% 37%;
+  --color-sec-dark: 181deg 98% 27%;
+  --color-sec-darker: 181deg 98% 17%;
 
-    --color-neu-0: 0 0% 100%;
-    --color-neu-50: 75 7% 97%;
-    --color-neu-100: 75 2% 95%;
-    --color-neu-200: 75 2% 90%;
-    --color-neu-300: 75 2% 85%;
-    --color-neu-400: 75 2% 80%;
-    --color-neu-500: 75 2% 70%;
-    --color-neu-600: 75 2% 60%;
-    --color-neu-700: 75 2% 40%;
-    --color-neu-800: 75 2% 20%;
-    --color-neu-900: 75 2% 5%;
+  --color-neu-0: 0 0% 100%;
+  --color-neu-50: 75 7% 97%;
+  --color-neu-100: 75 2% 95%;
+  --color-neu-200: 75 2% 90%;
+  --color-neu-300: 75 2% 85%;
+  --color-neu-400: 75 2% 80%;
+  --color-neu-500: 75 2% 70%;
+  --color-neu-600: 75 2% 60%;
+  --color-neu-700: 75 2% 40%;
+  --color-neu-800: 75 2% 20%;
+  --color-neu-900: 75 2% 5%;
 
-    /* CSS Variables for layout */
-    --navbar-h: 72px;
+  /* CSS Variables for layout */
+  --navbar-h: 72px;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-neu-900: 0 0% 100%;
-        --color-neu-800: 75 37% 97%;
-        --color-neu-700: 75 2% 95%;
-        --color-neu-600: 75 2% 90%;
-        --color-neu-500: 75 2% 55%;
-        --color-neu-400: 75 2% 40%;
-        --color-neu-300: 75 2% 27%;
-        --color-neu-200: 75 2% 15%;
-        --color-neu-100: 75 2% 9%;
-        --color-neu-50: 75 2% 7%;
-        --color-neu-0: 75 2% 2%;
-    }
+  :root {
+    --color-neu-900: 0 0% 100%;
+    --color-neu-800: 75 37% 97%;
+    --color-neu-700: 75 2% 95%;
+    --color-neu-600: 75 2% 90%;
+    --color-neu-500: 75 2% 55%;
+    --color-neu-400: 75 2% 40%;
+    --color-neu-300: 75 2% 27%;
+    --color-neu-200: 75 2% 15%;
+    --color-neu-100: 75 2% 9%;
+    --color-neu-50: 75 2% 7%;
+    --color-neu-0: 75 2% 2%;
+  }
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-    background: hsl(var(--color-neu-0));
-    color: hsl(var(--color-neu-900));
+  background: hsl(var(--color-neu-0));
+  color: hsl(var(--color-neu-900));
+  display: flex;
+  flex-direction: column;
 }
 
 .gql-focus-visible,
 .gql-all-anchors-focusable a {
-    @apply focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[5px] focus-visible:outline-neu-900;
+  @apply focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[5px] focus-visible:outline-neu-900;
 }
 
 .gql-container {
-    @apply mx-auto w-full max-w-[120rem];
+  @apply mx-auto w-full max-w-[120rem];
 }
 
 .gql-section {
-    @apply px-4 py-8 lg:px-12 xl:gap-x-24 xl:px-24 3xl:px-[240px];
+  @apply px-4 py-8 lg:px-12 xl:gap-x-24 xl:px-24 3xl:px-[240px];
 }
 
 .gql-navbar-strip,
 .gql-conf-navbar-strip {
-    @apply relative [contain:paint] before:sticky before:top-0 before:z-[9] before:-mt-[var(--navbar-h)] before:block before:h-[var(--navbar-h)] before:w-full before:content-[''];
+  @apply relative [contain:paint] before:sticky before:top-0 before:z-[9] before:-mt-[var(--navbar-h)] before:block before:h-[var(--navbar-h)] before:w-full before:content-[''];
 }
 
 .gql-navbar-strip {
-    --navbar-h: var(--nextra-navbar-height);
+  --navbar-h: var(--nextra-navbar-height);
 }
 
 .gql-radial-gradient {
-    background-image: radial-gradient(
-        ellipse at 50% 50%,
-        hsl(var(--color-neu-600)) 0%,
-        transparent 75%
-    );
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: radial-gradient(
+    ellipse at 50% 50%,
+    hsl(var(--color-neu-600)) 0%,
+    transparent 75%
+  );
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 :root {
-    --navbar-h: 70px;
+  --navbar-h: 70px;
 }
 
 /* without this Headless UI breaks sticky navbar */
 html:has([role="listbox"][data-open]),
 html:has([role="menu"][data-open]) {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 @supports (background: -webkit-named-image(i)) {
-    html {
-        /* Safari moves the fixed Navbar when overscrolling and it looks bad */
-        overscroll-behavior-y: none;
-    }
+  html {
+    /* Safari moves the fixed Navbar when overscrolling and it looks bad */
+    overscroll-behavior-y: none;
+  }
 }

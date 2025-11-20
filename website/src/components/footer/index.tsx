@@ -20,7 +20,7 @@ export function Footer({
   logo: ReactNode;
 }) {
   return (
-    <footer className="gql-all-anchors-focusable typography-menu relative !bg-neu-100 text-neu-900 dark:!bg-neu-0 max-md:px-0 max-md:pt-0">
+    <footer className="gql-all-anchors-focusable typography-menu relative !bg-neu-100 text-neu-900 dark:!bg-neu-0 max-md:px-0 max-md:pt-0 mt-auto">
       <Stripes />
       <div className="flex flex-wrap justify-between gap-4 p-4 max-md:w-full md:px-6 2xl:px-10">
         {logo}
@@ -32,7 +32,7 @@ export function Footer({
       <ul
         className={clsx(
           "grid grid-cols-2 gap-px bg-neu-400 py-px dark:bg-neu-100",
-          links.length >= 4 ? "lg:grid-cols-4" : "",
+          links.length >= 4 ? "lg:grid-cols-4" : ""
         )}
       >
         {links.map((box, i) => (
@@ -102,7 +102,7 @@ function FooterBox({ box }: { box: FooterLink | FooterLink[] }) {
               "gql-focus-visible block h-full p-3",
               link.disabled
                 ? "pointer-events-none"
-                : "underline-offset-4 hover:underline",
+                : "underline-offset-4 hover:underline"
             )}
             tabIndex={link.disabled ? -1 : undefined}
           >
@@ -121,7 +121,7 @@ function FooterBox({ box }: { box: FooterLink | FooterLink[] }) {
       title={disabled ? "Coming soon" : undefined}
       className={clsx(
         "gql-focus-visible relative block h-full p-4 pb-8 md:p-6 2xl:px-10",
-        disabled ? "pointer-events-none" : "underline-offset-4 hover:underline",
+        disabled ? "pointer-events-none" : "underline-offset-4 hover:underline"
       )}
       tabIndex={disabled ? -1 : undefined}
     >

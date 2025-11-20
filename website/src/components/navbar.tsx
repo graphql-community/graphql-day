@@ -45,11 +45,11 @@ export function Navbar({ links }: NavbarProps): ReactElement {
     <>
       <div
         className={clsx(
-          "top-0 w-full scale-y-105 bg-pri-base dark:bg-pri-darker",
+          "top-0 w-full scale-y-105",
           mobileDrawerOpen ? "static" : "absolute"
         )}
       />
-      <NavbarPlaceholder className="bg-pri-base before:bg-white/30 dark:bg-pri-darker dark:before:bg-blk/40" />
+      <NavbarPlaceholder className="before:bg-white/30 dark:bg-pri-darker dark:before:bg-blk/40" />
       <header
         className={clsx(
           "gql-all-anchors-focusable sticky top-0 z-[100] w-full border-b border-blk/60 font-special text-neu-900 antialiased dark:border-white/80",

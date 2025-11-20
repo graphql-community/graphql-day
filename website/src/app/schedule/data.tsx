@@ -1,7 +1,10 @@
+import { parseTalksCSV } from "./parse-talks-csv";
+
 type Speaker = {
   name: string;
   role: string;
   link?: string;
+  bio?: string;
 };
 
 export type ScheduleItem = {
@@ -10,9 +13,10 @@ export type ScheduleItem = {
   speakers?: Speaker[];
   type: "talk" | "break";
   description?: string;
+  abstract?: string;
 };
 
-export const SCHEDULE: ScheduleItem[] = [
+const BASE_SCHEDULE: ScheduleItem[] = [
   {
     time: "8:45 AM",
     title: "Breakfast",
@@ -193,3 +197,32 @@ export const SCHEDULE: ScheduleItem[] = [
     type: "talk",
   },
 ];
+
+// Enrich schedule with data from CSV
+const talksMap = parseTalksCSV();
+
+export const SCHEDULE: ScheduleItem[] = BASE_SCHEDULE.map((item) => {
+  if (item.type === "break" || !item.speakers) {
+    return item;
+  }
+
+  const talkData = talksMap.get(item.title);
+  if (!talkData) {
+    return item;
+  }
+
+  return {
+    ...item,
+    abstract: talkData.abstract,
+    speakers: item.speakers.map((speaker) => {
+      const speakerData = talkData.speakers.get(speaker.name);
+      if (!speakerData) {
+        return speaker;
+      }
+      return {
+        ...speaker,
+        bio: speakerData.bio,
+      };
+    }),
+  };
+});
