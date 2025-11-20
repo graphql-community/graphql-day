@@ -6,7 +6,7 @@ export const bbbKarrik = localFont({
 
 const newFontsStyles = /* css */ `
 html {
-  --font-sans: ${bbbKarrik.style.fontFamily};
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }`;
 
 export const NewFontsStyleTag = () => {
