@@ -56,8 +56,8 @@ export default function GraphQLDayAtFostPage() {
       >
         <HeroDateAndLocation />
         <div className="flex items-center gap-x-4 gap-y-2 flex-wrap max-sm:*:flex-1">
-          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
-            Submit a proposal
+          <Button href="#schedule" className="md:w-fit whitespace-nowrap">
+            See the schedule
           </Button>
           <Button
             className="backdrop-blur-xl md:w-fit whitespace-nowrap"
@@ -82,11 +82,11 @@ export default function GraphQLDayAtFostPage() {
           >
             <div className="flex gap-4 flex-wrap sm:items-center *:flex-1">
               <Button
-                href={CFP_LINK}
+                href="#schedule"
                 variant="primary"
                 className="whitespace-nowrap"
               >
-                Submit a proposal
+                See the schedule
               </Button>
               <Button href={TICKETS_LINK} variant="secondary">
                 Get your tickets
@@ -289,8 +289,12 @@ function BecomeASpeakerSection() {
             The CFP closes on Oct. 26th, 23:59 CET.
           </p>
 
-          <Button href={CFP_LINK} className="md:w-fit whitespace-nowrap">
-            Submit a proposal
+          <Button
+            href={CFP_LINK}
+            className="md:w-fit whitespace-nowrap"
+            disabled
+          >
+            CFP Closed
           </Button>
         </article>
       </div>
