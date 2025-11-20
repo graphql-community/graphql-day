@@ -25,6 +25,8 @@ export const Anchor = forwardRef(function Anchor(
 ) {
   return isInternal(props) ? (
     <NextLink {...props} ref={ref} />
+  ) : props.href?.startsWith("#") ? (
+    <a ref={ref} {...props} />
   ) : (
     <a ref={ref} rel="noopener noreferrer" target="_blank" {...props} />
   );
