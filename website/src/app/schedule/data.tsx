@@ -1,22 +1,22 @@
-import clsx from "clsx";
-
-import { Anchor } from "../components/design-system/anchor";
+import { parseTalksCSV } from "./parse-talks-csv";
 
 type Speaker = {
   name: string;
   role: string;
   link?: string;
+  bio?: string;
 };
 
-type ScheduleItem = {
+export type ScheduleItem = {
   time: string;
   title: string;
   speakers?: Speaker[];
   type: "talk" | "break";
   description?: string;
+  abstract?: string;
 };
 
-const SCHEDULE: ScheduleItem[] = [
+const BASE_SCHEDULE: ScheduleItem[] = [
   {
     time: "8:45 AM",
     title: "Breakfast",
@@ -198,71 +198,31 @@ const SCHEDULE: ScheduleItem[] = [
   },
 ];
 
-export function ScheduleSection() {
-  return (
-    <section className="gql-section xl:py-12" id="schedule">
-      <div className="gql-container">
-        <h3 className="typography-h2 mb-12">Schedule</h3>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <div className="typography-h3">December 11</div>
-            <div className="typography-body-lg text-neu-700">
-              Room: Aubepine 1/2
-            </div>
-          </div>
-          <div className="flex flex-col">
-            {SCHEDULE.map((item, index) => (
-              <div
-                key={index}
-                className={clsx(
-                  "flex flex-col gap-4 border-b border-neu-200 p-6 md:flex-row md:gap-12",
-                  item.type === "break" && "bg-neu-100"
-                )}
-              >
-                <div className="typography-menu min-w-[160px] font-medium text-neu-700 whitespace-nowrap">
-                  {item.time}
-                </div>
-                <div className="flex flex-col gap-2">
-                  <h4 className="typography-h3 text-xl font-bold text-neu-900">
-                    {item.title}
-                  </h4>
-                  {item.description && (
-                    <p className="typography-body-md text-neu-700">
-                      {item.description}
-                    </p>
-                  )}
-                  {item.speakers && (
-                    <div className="flex flex-col gap-1 mt-1">
-                      {item.speakers.map((speaker, i) => (
-                        <div
-                          key={i}
-                          className="typography-body-md text-neu-700"
-                        >
-                          {speaker.link ? (
-                            <Anchor
-                              href={speaker.link}
-                              className="typography-link"
-                            >
-                              {speaker.name}
-                            </Anchor>
-                          ) : (
-                            <span>{speaker.name}</span>
-                          )}
-                          {speaker.role && (
-                            <span className="text-neu-700">
-                              , {speaker.role}
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+// Enrich schedule with data from CSV
+const talksMap = parseTalksCSV();
+
+export const SCHEDULE: ScheduleItem[] = BASE_SCHEDULE.map((item) => {
+  if (item.type === "break" || !item.speakers) {
+    return item;
+  }
+
+  const talkData = talksMap.get(item.title);
+  if (!talkData) {
+    return item;
+  }
+
+  return {
+    ...item,
+    abstract: talkData.abstract,
+    speakers: item.speakers.map((speaker) => {
+      const speakerData = talkData.speakers.get(speaker.name);
+      if (!speakerData) {
+        return speaker;
+      }
+      return {
+        ...speaker,
+        bio: speakerData.bio,
+      };
+    }),
+  };
+});

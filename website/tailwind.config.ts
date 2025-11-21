@@ -114,24 +114,28 @@ const config: Config = {
           "@screen lg": {
             fontSize: "96px",
           },
+          letterSpacing: "-0.02em",
         },
         ".typography-h1": {
           fontSize: "40px",
           "@screen lg": {
             fontSize: "72px",
           },
+          letterSpacing: "-0.02em",
         },
         ".typography-h2": {
           fontSize: "32px",
           "@screen md": {
             fontSize: "48px",
           },
+          letterSpacing: "-0.01em",
         },
         ".typography-h3": {
           fontSize: "24px",
           "@screen md": {
             fontSize: "32px",
           },
+          letterSpacing: "-0.01em",
         },
       });
 
@@ -177,7 +181,7 @@ const config: Config = {
           textTransform: "uppercase",
         },
         ".typography-menu": {
-          fontFamily: "var(--font-karrik)",
+          fontFamily: "var(--font-sans)",
           fontSize: "14px",
           lineHeight: "1",
           textTransform: "uppercase",

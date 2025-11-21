@@ -18,8 +18,10 @@ export async function loadFontsForOG(): Promise<FontOptions[]> {
   const dirname = "src/fonts/og";
   return [
     {
-      data: await readFile(resolve(cwd, dirname, "BBB_Karrik.ttf")),
-      name: "BBB Karrik",
+      data: await readFile(resolve(cwd, dirname, "Switzer-Regular.ttf")),
+      name: "Switzer",
+      weight: 400,
+      style: "normal",
     },
   ];
 }
