@@ -12,7 +12,7 @@ export function ScheduleSection() {
           <div className="flex flex-col gap-2">
             <div className="typography-h2">December 11</div>
             <div className="typography-body-lg text-neu-700">
-              Room: Aubepine 1/2
+              Room: Aubepine 3/4
             </div>
           </div>
         </header>
