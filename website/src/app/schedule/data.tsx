@@ -23,7 +23,7 @@ const BASE_SCHEDULE: ScheduleItem[] = [
     type: "break",
   },
   {
-    time: "9:15 AM - 9:45 AM",
+    time: "9:15 AM - 9:40 AM",
     title:
       "GraphQL: Untangling under- and overfetching problem at the largest e-commerce in NL/BE",
     speakers: [
