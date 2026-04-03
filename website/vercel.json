@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/2025/:path*",
+      "destination": "/:path*"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path((?!2025(?:/|$)).*)",
