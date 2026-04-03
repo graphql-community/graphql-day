@@ -1,4 +1,6 @@
 {
+  "buildCommand": "next build --turbopack && mv out _out && mkdir -p out/2025 && mv _out/* out/2025/ && rmdir _out",
+  "outputDirectory": "out",
   "redirects": [
     {
       "source": "/:path((?!2025(?:/|$)).*)",
