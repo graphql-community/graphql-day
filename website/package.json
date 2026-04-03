@@ -6,7 +6,7 @@
   "packageManager": "bun@1.2.20",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build --turbopack && mv out _out && mkdir -p out/2025 && mv _out/* out/2025/ && rmdir _out",
     "start": "next start",
     "serve": "bunx serve out",
     "typecheck": "tsc --noEmit",
