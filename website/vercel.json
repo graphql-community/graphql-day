@@ -1,9 +1,13 @@
 {
-  "buildCommand": "next build --turbopack && mv out _out && mkdir -p out/2025 && mv _out/* out/2025/ && rmdir _out",
-  "outputDirectory": "out",
+  "rewrites": [
+    {
+      "source": "/2025/:path*",
+      "destination": "/:path*"
+    }
+  ],
   "redirects": [
     {
-      "source": "/:path((?!2025(?:/|$)).*)",
+      "source": "/:path((?!(?:2025|_next)(?:/|$)).*)",
       "destination": "https://graphql.org/day/:path",
       "permanent": true
     }
