@@ -15,13 +15,14 @@ export const metadata: Metadata = {
   },
   description:
     "Join GraphQL Day at CNIT La Defense, Paris on December 11, 2025. Learn from industry experts, participate in hands-on workshops, and connect with the GraphQL community.",
-  metadataBase: new URL("https://graphql.day"),
+  metadataBase: new URL("https://graphql.day/2025"),
   keywords: ["GraphQL", "Conference", "FOST", "11 December 2025", "Paris"],
   applicationName: "GraphQL Day",
   title: {
     absolute: "",
     template: "%s | GraphQL Day",
   },
+  icons: { icon: "/2025/favicon.svg" },
 };
 
 export default function RootLayout({
@@ -32,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth antialiased">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <style>{`html { scroll-padding-top: 5rem }`}</style>
         <FontStyleTag />
       </head>

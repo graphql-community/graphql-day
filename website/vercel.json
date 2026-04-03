@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path((?!2025/).*)",
+      "destination": "https://graphql.org/day/",
+      "permanent": false
+    }
+  ]
+}
